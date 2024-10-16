@@ -5,7 +5,7 @@ import { createQuestion, mapParticipants, getAllMappings } from '../controllers/
 
 const router = express.Router();
 
-// Admin  question creation
+// Admin  creates questions
 router.post('/question', verifyToken, roleCheck(['admin']), createQuestion);
 
 // Admin will map the  participants to supervisor, peers, and juniors

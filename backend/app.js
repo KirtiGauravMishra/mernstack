@@ -6,9 +6,11 @@ import cookieParser from "cookie-parser";
 import auth from "./routes/auth.js";
 import admin from './routes/adminRoutes.js';
 import appraisal from './routes/appraisalRoutes.js'
+import cors from 'cors';
 
 const app = express();
 dotenv.config({path:"./config/config.env"})
+app.use(cors());
 
 // cookieparser used for getting token and authorization
 app.use(cookieParser());
